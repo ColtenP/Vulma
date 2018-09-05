@@ -1,29 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <VSection>
+      <VContainer>
+        <VImage src="https://bulma.io/images/placeholders/128x128.png" is-128x128 is-rounded />
+      </VContainer>
+    </VSection>
+
+    <VFooter>
+      <VContainer>
+        <h1 class="title">Hello World!</h1>
+      </VContainer>
+    </VFooter>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import HelloWorld from './components/HelloWorld.vue'
 
-@Component({
-  components: {
-  HelloWorld,
-  },
-  })
+@Component
 export default class App extends Vue {}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="sass" src="bulma/bulma.sass"></style>
